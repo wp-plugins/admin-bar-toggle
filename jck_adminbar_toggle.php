@@ -8,6 +8,7 @@ Author URI: http://www.jckemp.com
 License: GPL2
 
 Copyright 2012, James Kemp
+
 */
 
 class jck_hideshow_adminbar
@@ -23,7 +24,8 @@ class jck_hideshow_adminbar
     if (!is_super_admin() || !is_admin_bar_showing() || is_admin())
       return;
     // Scripts
-    wp_enqueue_script('jck_hs_ab_scripts', plugins_url('assets/js/scripts.js', __FILE__), 'jquery');
+    wp_enqueue_script('jquery');
+		wp_enqueue_script('jck_hs_ab_scripts', plugins_url('assets/js/scripts.js', __FILE__), 'jquery');
     // Styles
     $css = plugins_url('assets/css/style.css', __FILE__);
     wp_register_style('jck_hs_ab_styles', $css);
