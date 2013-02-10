@@ -4,7 +4,7 @@ Contributors: jamesckemp
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=NFBMUSAPCTF88&lc=US&item_name=James%20Kemp&currency_code=GBP&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: admin, admin bar, ui, toggle, jquery
 Requires at least: 3.0
-Tested up to: 3.3.1
+Tested up to: 3.5.1
 Stable tag: 1.0
 
 Hides the admin bar on the front-end by default, and adds a toggle to activate it.
