@@ -2,7 +2,7 @@
 Plugin Name: JCK Admin Bar Toggle
 Plugin URI: http://www.jckemp.com
 Description: Hides the admin bar on the front-end by default, and adds a toggle to activate it.
-Version: 1.0
+Version: 1.1
 Author: James Kemp
 Author URI: http://www.jckemp.com
 License: GPL2
@@ -21,7 +21,7 @@ class jck_hideshow_adminbar
   ################################################	
   function scripts_and_styles()
   {
-    if (!is_super_admin() || !is_admin_bar_showing() || is_admin())
+    if (!is_admin_bar_showing() || is_admin())
       return;
     // Scripts
     wp_enqueue_script('jquery');
@@ -40,7 +40,7 @@ class jck_hideshow_adminbar
   function add_hideshow()
   {
     global $wp_admin_bar;
-    if (!is_super_admin() || !is_admin_bar_showing() || is_admin())
+    if (!is_admin_bar_showing() || is_admin())
       return;
     $wp_admin_bar->add_menu(array(
       'id' => 'hideshow',
@@ -94,6 +94,7 @@ class jck_hideshow_adminbar
       &$this,
       'head_filter'
     ));
+    add_theme_support( 'admin-bar', array( 'callback' => '__return_false') );
   }
   /** ======================================= */
   
