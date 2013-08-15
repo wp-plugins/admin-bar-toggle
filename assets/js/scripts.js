@@ -16,11 +16,11 @@ jQuery(document).ready(function($) {
 
 			
 
-			$('html').stop().animate({marginTop:'0'},250);
+			$('html').stop().animate({marginTop:'0'},250,"linear");
 
-			$('#wpadminbar').stop().animate({marginTop:'-28px'},250,function(){
+			$('#wpadminbar').stop().animate({marginTop:'-28px'},250,"linear",function(){
 
-				$('#showadminbar').stop().animate({marginTop:'0'},250);
+				$('#showadminbar').stop().animate({marginTop:'0'},250,"linear");
 
 			});
 
@@ -36,11 +36,11 @@ jQuery(document).ready(function($) {
 
 			
 
-			$(this).stop().animate({marginTop:'-28px'},250,function(){
+			$(this).stop().animate({marginTop:'-28px'},250,"linear",function(){
 
-				$('html').stop().animate({marginTop:'28px'},250);
+				$('html').stop().animate({marginTop:'28px'},250,"linear");
 
-				$('#wpadminbar').stop().animate({marginTop:'0'},250);
+				$('#wpadminbar').stop().animate({marginTop:'0'},250,"linear");
 
 			});
 
