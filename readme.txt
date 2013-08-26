@@ -27,6 +27,12 @@ Admin Bar toggle adds a toggle switch to show/hide the admin bar on the front-en
 
 == Changelog ==
 
+= 1.2 =
+* Added code to remove admin bar bump for some themes.
+
+= 1.1 =
+* Enabled for all user types, not just admin.
+
 = 1.0 =
 * First Release
 
