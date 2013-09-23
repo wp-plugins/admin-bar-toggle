@@ -55,6 +55,7 @@ class jck_hideshow_adminbar
   ###       Filter head to change CSS          ###
   ###                                          ###
   ################################################	
+  
   function head_filter()
   {
     remove_action('wp_head', '_admin_bar_bump_cb');
@@ -64,39 +65,37 @@ class jck_hideshow_adminbar
   ###                                          ###
   ###            Construct Plugin              ###
   ###                                          ###
-  ################################################	
+  ################################################
+
+/* 	=============================
+   	PHP 5 Constructor 
+   	============================= */
+   	
+	function __construct()
+	{
+		add_action('wp_before_admin_bar_render', array(
+		  &$this,
+		  'add_hideshow'
+		), 0);
+		add_action('wp_enqueue_scripts', array(
+		  &$this,
+		  'scripts_and_styles'
+		));
+		add_action('get_header', array(
+		  &$this,
+		  'head_filter'
+		));
+		add_theme_support( 'admin-bar', array( 'callback' => '__return_false') );
+	}
   
-  /** =======================================
-  
-  * PHP 4 Compatible Constructor
-  
-  */
-  function jck_hideshow_adminbar()
-  {
-    $this->__construct();
-  }
-  /**
-  
-  * PHP 5 Constructor
-  
-  */
-  function __construct()
-  {
-    add_action('wp_before_admin_bar_render', array(
-      &$this,
-      'add_hideshow'
-    ), 0);
-    add_action('wp_enqueue_scripts', array(
-      &$this,
-      'scripts_and_styles'
-    ));
-    add_action('get_header', array(
-      &$this,
-      'head_filter'
-    ));
-    add_theme_support( 'admin-bar', array( 'callback' => '__return_false') );
-  }
-  /** ======================================= */
+/* 	=============================
+	PHP 4 Compatible Constructor 
+	============================= */
+	
+	function jck_hideshow_adminbar()
+	{
+		$this->__construct();
+	}
   
 } // End jck_kvt Class
 
