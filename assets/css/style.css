@@ -1,27 +1,23 @@
 #wp-admin-bar-top-secondary { padding-right:26px !important; }
 #wp-admin-bar-hideshow { position:absolute !important; top:0; right:0; width:25px; }
-#wp-admin-bar-hideshow .ab-item {
+#wp-admin-bar-hideshow a.ab-item {
 	text-align:center;
 	padding:0 !important;
-	line-height:24px;
+	line-height:32px;
+	color: #999999;
+	font-size: 16px;
 }
 #showadminbar { 
 	position:fixed; 
-	width:24px; 
+	width:24px;
 	display:block; 
-	height:28px; 
+	height:32px; 
 	top:0; 
 	right:0; 
 	direction:ltr; 
-	color:#ccc;
-	font:normal 13px/24px sans-serif;
-	background-color:#464646; 
-	background-image:-ms-linear-gradient(bottom, #373737, #464646 5px); 
-	background-image:-moz-linear-gradient(bottom, #373737, #464646 5px); 
-	background-image:-o-linear-gradient(bottom, #373737, #464646 5px); 
-	background-image:-webkit-gradient(linear, left bottom, left top, from(#373737), to(#464646)); 
-	background-image:-webkit-linear-gradient(bottom, #373737, #464646 5px); 
-	background-image:linear-gradient(bottom, #373737, #464646 5px);
+	color:#999999;
+	font:normal 16px/32px sans-serif;
+	background-color:#222222;
 	text-decoration:none;
 	text-align:center;
 	-webkit-border-bottom-left-radius: 5px;
@@ -31,4 +27,17 @@
 	z-index:9999;
 }
 
-#showadminbar:hover { color:#fafafa; background-color:#3a3a3a; background-image:-ms-linear-gradient(bottom, #3a3a3a, #222); background-image:-moz-linear-gradient(bottom, #3a3a3a, #222); background-image:-o-linear-gradient(bottom, #3a3a3a, #222); background-image:-webkit-gradient(linear, left bottom, left top, from(#3a3a3a), to(#222)); background-image:-webkit-linear-gradient(bottom, #3a3a3a, #222); background-image:linear-gradient(bottom, #3a3a3a, #222); }
+#showadminbar:hover { 
+	color:#fafafa;
+}
+
+@media all and (max-width: 782px) {
+	#showadminbar,
+	#wp-admin-bar-hideshow a.ab-item {
+		display: none;
+	}
+	
+	#wp-admin-bar-top-secondary {
+		padding-right: 0 !important;
+	}
+}

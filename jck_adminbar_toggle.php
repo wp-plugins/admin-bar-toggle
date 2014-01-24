@@ -2,12 +2,12 @@
 Plugin Name: JCK Admin Bar Toggle
 Plugin URI: http://www.jckemp.com
 Description: Hides the admin bar on the front-end by default, and adds a toggle to activate it.
-Version: 1.2.1
+Version: 1.3
 Author: James Kemp
 Author URI: http://www.jckemp.com
 License: GPL2
 
-Copyright 2012, James Kemp
+Copyright 2014, James Kemp
 
 */
 
